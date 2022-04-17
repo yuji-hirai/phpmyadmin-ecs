@@ -640,6 +640,9 @@ class Core
         if (strpos($mimetype, 'gzip') !== false && $notChromeOrLessThan43) {
             header('Content-Encoding: gzip');
         }
+        else {
+            header_remove('Content-Encoding');
+         }
         header('Content-Transfer-Encoding: binary');
         if ($length <= 0) {
             return;
