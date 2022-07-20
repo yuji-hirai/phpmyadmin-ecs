@@ -26,7 +26,7 @@ $i++;
 
 $cfg['Servers'][$i]['auth_type'] = 'cookie';
 $cfg['Servers'][$i]['host'] = getenv("PMA_HOST_PROD");
-$cfg['Servers'][$i]['verbose'] = 'rds-prod';
+$cfg['Servers'][$i]['verbose'] = getenv("PMA_INSTANCE_NAME_PROD");
 $cfg['Servers'][$i]['compress'] = false;
 $cfg['Servers'][$i]['AllowNoPassword'] = false;
 
@@ -35,7 +35,7 @@ $i++;
 
 $cfg['Servers'][$i]['auth_type'] = 'cookie';
 $cfg['Servers'][$i]['host'] = getenv("PMA_HOST_DEV");
-$cfg['Servers'][$i]['verbose'] = 'rds-dev';
+$cfg['Servers'][$i]['verbose'] = getenv("PMA_INSTANCE_NAME_DEV");
 $cfg['Servers'][$i]['compress'] = false;
 $cfg['Servers'][$i]['AllowNoPassword'] = false;
 
